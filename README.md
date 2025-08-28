@@ -25,8 +25,9 @@
 <h3>Ah, e certifique-se de possuir o Node.js está instalado em sua máquina</h3>
 
 ```bash
-git clone https://github.com/Julia-maria56/projeto-digital-store.git
-cd Projeto-Digital-Store
+git clone https://github.com/Julia-maria56/Agenda-de-Contatos.git
+cd Agenda-de-Contatos
+No terminal vscode:
 npm install
 npm run api
 ```
