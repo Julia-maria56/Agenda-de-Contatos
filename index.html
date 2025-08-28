@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <title>Agenda de contatos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Agenda de<br> contatos</h1>
+        <input type="text" id="pesquisar_contato" placeholder="Pesquisar por nome..." onkeyup="pesquisarContato()">
+        <button id="abrir_modal" onclick="abrirModal()">Criar contato</button>
+    </header>
+    <main>
+        <section id="blur" onclick="fecharModal()"></section>
+        <div id="modal">
+            <form onsubmit="novoContato()">
+                <h3>
+                    Crie um contato
+                    <i class='bx  bx-x' onclick="fecharModal()"></i>
+                </h3>
+                <label for="titulo">Imagem (URL)</label>
+                <input id="titulo" type="text">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" required>
+                <label for="telefone">Telefone</label>
+                <input id="telefone" type="tel" required>
+                <label for="email">Email</label>
+                <input id="email" type="email" required>
+                <button>Registrar contato</button>
+            </form>
+        </div>
+        <section id="contatos_lista">
+            <ul>
+                <!-- <li>
+                    <img src="images/image.png" alt="">
+                    <h3>Nome</h3>
+                    <div class="infos-contatos">
+                        <h4>Telefone: <p>xxxx-xxxx</p></h4>
+                        <h4>Email: <p>hhhhss</p></h4>
+                    </div>
+                </li> -->
+
+            </ul>
+
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

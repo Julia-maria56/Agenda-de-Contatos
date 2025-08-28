@@ -1,0 +1,25 @@
+{
+  "contatos": [
+    {
+      "imagem": "https://upload.wikimedia.org/wikipedia/commons/c/cb/01.01.2023_-_Posse_de_Marina_Silva%2C_Ministra_de_Estado_do_Meio_Ambiente_%2852623748361%29_%28cropped%29.jpg",
+      "nome": "Marina",
+      "telefone": "(00) 0000-0000",
+      "email": "marina@gmail.com",
+      "id": 2
+    },
+    {
+      "imagem": "https://i.pravatar.cc/150?img=12",
+      "nome": "Arthur Silva",
+      "telefone": "(00) 0000-0000",
+      "email": "arthur@gmail.com",
+      "id": 3
+    },
+    {
+      "imagem": "https://static.wikia.nocookie.net/marinaandthediamonds/images/5/54/Marina_Diamandis.png/revision/latest?cb=20201118233854&path-prefix=pt-br",
+      "nome": "Marina",
+      "telefone": "(00) 0000-0000",
+      "email": "marina.com",
+      "id": 4
+    }
+  ]
+}

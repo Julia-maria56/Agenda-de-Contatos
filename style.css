@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Gothic&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rosario:ital,wght@0,300..700;1,300..700&family=Special+Gothic+Condensed+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline:none;
+    list-style: none;
+    --background-color: rgb(34, 34, 34);
+    --bg-purple: rgb(132, 14, 201);
+    --transition: all ease-in-out 200ms;
+}
+
+body {
+    background-color: var(--background-color);
+    width: 100vw;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    color: white;
+    padding: 20px 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 500;
+    text-align: left;
+    line-height: 37px;
+}
+
+header input {
+    width: 30vw;
+    background-color: var(--background-color);
+    height: 60px;
+    color: white;
+    border-radius: 8px;
+    border: 3px solid var(--bg-purple);
+    padding-left: 20px;
+    font-size: 17px;
+    outline: none;
+    transition: var(--transition);
+}
+
+header input::placeholder {
+    color: white;
+}
+
+header input:hover {
+    background-color: var(--bg-purple);
+}
+
+header button {
+    padding: 15px 25px;
+    background-color: var(--bg-purple);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+header button:hover {
+    background-color: var(--background-color);
+    border: 3px solid var(--bg-purple);
+}
+
+#blur {
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 200ms;
+}
+
+#blur.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#modal {
+    margin-top: 40px;
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    z-index:3;
+}
+
+#modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#modal form h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    color: rgb(139, 131, 131);
+}
+
+
+form h3 i {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+form h3 i:hover {
+  color: var(--bg-purple);
+}
+
+
+#modal form label{
+    color: var(--background-color);
+    margin-top:15px;
+    display: flex;
+ }
+
+#modal form input{
+    width:100%;
+    height:38px;
+    border: 2px solid var(--bg-purple);
+    border-radius: 5px;
+    padding-left:10px;
+    font-size: 15px;
+}
+
+#modal form button{
+    width:100%;
+    background-color: var(--bg-purple);
+    border: none;
+    margin-top:10px;
+    padding:15px 20px;
+    cursor: pointer;
+    color:white;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+#modal form button:hover{
+    background-color: rgb(105, 5, 163);
+    
+    
+}
+
+#contatos_lista ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+#contatos_lista ul li {
+    width: 300px;
+    height: 350px;
+    border-radius: 8px;
+    background-color: #f5f4f4;
+    color: var(--bg-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid var(--bg-purple);
+    transition: var(--transition);
+    padding-left:3px;
+
+}
+
+#contatos_lista ul li.oculto{
+    display: none;
+}
+
+#contatos_lista ul li img {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+     object-fit: cover; 
+}
+
+#contatos_lista ul li h3 {
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#contatos_lista ul li h4 {
+    display: flex;
+    gap: 3px;
+    font-weight: 600;
+    
+}
+
+#contatos_lista ul li p {
+    color: var(--background-color);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.infos-contatos {
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    margin-top: 200px;
+
+}
+
+#contatos_lista ul li:hover {
+    background-color: #c5c5c5;
+    border: none;
+    scale: 1.04;
+
+}
